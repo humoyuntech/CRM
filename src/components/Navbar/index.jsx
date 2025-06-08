@@ -1,10 +1,10 @@
 import React from 'react'
 import { Container } from './style'
 
-const Root = () => {
+const Navbar = () => {
   return (
-    <Container>Hello World</Container>
+    <Container>Navbar</Container>
   )
 }
 
-export default Root
+export default Navbar

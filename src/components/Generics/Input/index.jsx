@@ -1,10 +1,10 @@
 import React from 'react'
 import { Container } from './style'
 
-const Root = () => {
+const Input = () => {
   return (
-    <Container>Hello World</Container>
+    <Container>Input</Container>
   )
 }
 
-export default Root
+export default Input

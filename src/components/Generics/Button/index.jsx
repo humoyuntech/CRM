@@ -1,10 +1,10 @@
 import React from 'react'
 import { Container } from './style'
 
-const Root = () => {
+const Button = () => {
   return (
-    <Container>Hello World</Container>
+    <Container>Button</Container>
   )
 }
 
-export default Root
+export default Button

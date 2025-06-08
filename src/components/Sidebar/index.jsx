@@ -1,10 +1,10 @@
 import React from 'react'
 import { Container } from './style'
 
-const Root = () => {
+const Sidebar = () => {
   return (
-    <Container>Hello World</Container>
+    <Container>Sidebar</Container>
   )
 }
 
-export default Root
+export default Sidebar
