@@ -53,9 +53,12 @@ git push -u origin main
  */
 
 
-// git branch -M "001/CreateProject"
-// git push -u origin "001/CreateProject"
+// git branch -M "002/RouteConfig"
+// git push -u origin "002/RouteConfig"
 
+// 4-video
+// "001/CreateProject"
+// "002/RouteConfig"
 
 //   1 - dars | Project haqida | YouTube Link
 // — Bu qanday project?
