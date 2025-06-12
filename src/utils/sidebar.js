@@ -37,7 +37,7 @@ const sidebar = [
     children: [
       {
         id: `2-1`,
-        title: "Barcha Lidlar",
+        title: "Barcha lidlar",
         path: "/lidlar/all-lids",
         isPrivate: true,
         element: Generics,
@@ -45,7 +45,7 @@ const sidebar = [
       },
       {
         id: `2-2`,
-        title: "Birinchi Dars",
+        title: "Birinchi dars",
         path: "/lidlar/first-class",
         isPrivate: true,
         element: Generics,
@@ -53,7 +53,7 @@ const sidebar = [
       },
       {
         id: `2-3`,
-        title: "Yangi Talabalar",
+        title: "Yangi talabalar",
         path: "/lidlar/new-students",
         isPrivate: true,
         element: Generics,

@@ -53,14 +53,14 @@ git push -u origin main
  */
 
 
-// git branch -M "003/CRM_Structure"
-// git push -u origin "003/CRM_Structure"
+// git branch -M "004/CreateSidebar"
+// git push -u origin "004/CreateSidebar"
 
-// 5-video
-// "001/CreateProject"
-// "002/RouteConfig"
-// "003/CRM_Structure"
-
+// 6-7-video
+// 001/CreateProject
+// 002/RouteConfig
+// 003/CRM_Structure
+// 004/CreateSidebar
 
 //   1 - dars | Project haqida | YouTube Link
 // — Bu qanday project?
