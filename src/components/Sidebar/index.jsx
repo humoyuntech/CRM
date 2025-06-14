@@ -1,5 +1,5 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import { Arrow, Body, ChildWrapper, Container, LogOut, Logo, Menu, MenuItem, Side, Wrapper,} from "./style";
+import {ExitIcon, Arrow, Body, ChildWrapper, Container, LogOut, Logo, Menu, MenuItem, Side, Wrapper,} from "./style";
 
 import Navbar from "../Navbar";
 import { Profile } from "./profile";
@@ -59,7 +59,7 @@ export const Sidebar = () => {
           })}
         </Menu>
 
-        <LogOut onClick={onLogOut}>Chiqish</LogOut>
+        <LogOut onClick={onLogOut}><ExitIcon /> Chiqish</LogOut>
       </Side>
       <Body>
         <Navbar />

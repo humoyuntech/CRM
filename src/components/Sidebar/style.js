@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import arrow from "../../assets/icons/rightArrow.svg?react";
+import exit from "../../assets/icons/exit.svg?react";
 
 const Arrow = styled(arrow)`
   display: flex;
@@ -51,6 +52,7 @@ const Logo = styled.div`
 
 const LogOut = styled(Logo)`
   display: flex;
+  align-items: center;
   margin-top: auto;
   width: 100%;
   position: sticky;
@@ -136,4 +138,8 @@ const ChildWrapper = styled.div`
   overflow: hidden;
 `;
 
-export { Container, ChildWrapper, MenuItem, Side, Body, Menu, Wrapper, Logo, LogOut, ProfileContaier, Arrow };
+const ExitIcon = styled(exit)`
+  margin-right: 16px;
+`;
+
+export {ExitIcon, Container, ChildWrapper, MenuItem, Side, Body, Menu, Wrapper, Logo, LogOut, ProfileContaier, Arrow };
