@@ -1,74 +1,100 @@
-import { Outlet, useNavigate } from "react-router-dom";
-import {ExitIcon, Arrow, Body, ChildWrapper, Container, LogOut, Logo, Menu, MenuItem, Side, Wrapper,} from "./style";
+import React, { useEffect, useState } from 'react';
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import {Container, Side, Body, Wrapper, Logo, LogOut, Menu, MenuItem, Arrow, ChildWrapper, ExitIcon} from './style'
+import Navbar from "../Navbar"
+import Profile from "./profile"
+import myPhoto from "../../assets/images/Khumoyun.webp";
+import sidebar from "../../utils/sidebar"
 
-import Navbar from "../Navbar";
-import { Profile } from "./profile";
-import sidebar from "../../utils/sidebar";
-import { useState } from "react";
-
-export const Sidebar = () => {
-  const [open, setOpen] = useState([3]);
+export function Sidebar() {
+  const [open, setOpen] = useState([]);
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = JSON.parse(localStorage.getItem("open"));
+    setOpen(path || []);
+  }, []);
+
+  useEffect(() => {}, [location]);
+
   const onClickLogo = () => {
     navigate("/");
   };
   const onLogOut = () => {
-    navigate("/");
+    navigate("/login");
   };
 
-  const onClickParent = (id) => {
-    if (open.includes(id)) {
+  const onClickParent = ({ id, children, path }, e) => {
+    if (open?.includes(id)) {
       let data = open.filter((val) => val !== id);
+      localStorage.setItem("open", JSON.stringify(data));
       setOpen(data);
     } else {
+      localStorage.setItem("open", JSON.stringify([...open, id]));
       setOpen([...open, id]);
     }
+    if (!children) {
+      e.preventDefault();
+      navigate(path);
+    }
   };
+
   return (
     <Container>
       <Side>
-        <Logo onClick={onClickLogo}>Webbrain CRM</Logo>
-        <Profile name="Khumoyun Rustamov" email="humoyun@gmail.com" />
+        <Logo onClick={onClickLogo}>Humo CRM</Logo>
+        <Profile name={"Rustamov Khumoyun"} email={"humoyuntech@gmail.com"} photo={myPhoto}/>
         <Menu>
           {sidebar.map((parent) => {
             const active = open.includes(parent.id);
             const { icon: Icon } = parent;
-            return (
-              <>
+            const activePath = location.pathname?.includes(parent.path);
+
+            return !parent.hidden ? (
+              <React.Fragment key={parent.id}>
                 <MenuItem
-                  key={parent.id}
-                  onClick={() => onClickParent(parent.id)}
+                  onClick={(e) => onClickParent(parent, e)}
+                  active={activePath.toString()}
                 >
-                  <MenuItem.Title>
+                  <MenuItem.Title active={activePath.toString()}>
                     <Icon className="icon" /> {parent.title}
                   </MenuItem.Title>
-                  {parent?.children?.length && <Arrow active={active} />}
+                  {parent?.children?.length && (
+                    <Arrow active={active.toString()} />
+                  )}
                 </MenuItem>
-                <ChildWrapper active={active}>
+                <ChildWrapper active={active.toString()}>
                   {parent?.children?.map((child) => {
                     return (
-                      <MenuItem key={child?.id}>
+                      <MenuItem
+                        key={child?.id}
+                        to={child.path}
+                        active={(location.pathname === child.path).toString()}
+                      >
                         <MenuItem.Title>{child?.title}</MenuItem.Title>
                       </MenuItem>
                     );
                   })}
                 </ChildWrapper>
-              </>
-            );
+              </React.Fragment>
+            ) : null;
           })}
         </Menu>
 
-        <LogOut onClick={onLogOut}><ExitIcon /> Chiqish</LogOut>
+        <LogOut onClick={onLogOut}>
+          <ExitIcon /> Chiqish
+        </LogOut>
       </Side>
-      <Body>
-        <Navbar />
-        <Wrapper>
-          <Outlet />
-        </Wrapper>
-      </Body>
+        <Body>
+          <Navbar/>
+          <Wrapper>
+            <Outlet />
+          </Wrapper>
+        </Body>
     </Container>
-  );
-};
+  )
+}
 
 export default Sidebar;

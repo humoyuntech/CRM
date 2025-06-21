@@ -1,10 +1,10 @@
 import { ProfileContaier } from "./style";
 import noImg from "../../assets/images/noUser.webp";
 
-export const Profile = ({name, email}) => {
+export const Profile = ({name, email, photo}) => {
   return (
     <ProfileContaier>
-      <ProfileContaier.Image src={noImg} />
+      <ProfileContaier.Image src={photo || noImg} />
       <div>
         <ProfileContaier.Name>{name || "User"}</ProfileContaier.Name>
         <ProfileContaier.Email>{email || 'User Mail'}</ProfileContaier.Email>
@@ -12,3 +12,4 @@ export const Profile = ({name, email}) => {
     </ProfileContaier>
   );
 };
+export default Profile;
