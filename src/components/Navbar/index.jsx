@@ -1,5 +1,7 @@
 import React from 'react'
-import { Container, InputWrapper, Input, SearchIcon } from './style'
+import { Container, InputWrapper, Input, SearchIcon, Section } from './style';
+import Time from './Time ';
+import GenericSelect from './GenericSelect';
 
 const Navbar = () => {
   return (
@@ -7,6 +9,7 @@ const Navbar = () => {
       <InputWrapper>
         <SearchIcon/> <Input placeholder="search" />
       </InputWrapper>
+      <Section><Time/><GenericSelect /> </Section>
     </Container>
   )
 }
