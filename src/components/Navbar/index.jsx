@@ -1,9 +1,13 @@
 import React from 'react'
-import { Container } from './style'
+import { Container, InputWrapper, Input, SearchIcon } from './style'
 
 const Navbar = () => {
   return (
-    <Container>Navbar</Container>
+    <Container>
+      <InputWrapper>
+        <SearchIcon/> <Input placeholder="search" />
+      </InputWrapper>
+    </Container>
   )
 }
 

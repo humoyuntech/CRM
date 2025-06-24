@@ -56,11 +56,13 @@ git push -u origin main
 // git branch -M "005/ActivePath"
 // git push -u origin "005/ActivePath"
 
-// 8-9-video
+// 10-video
 // 001/CreateProject
 // 002/RouteConfig
 // 003/CRM_Structure
 // 004/CreateSidebar
+// 005/ActivePath
+// 006/Navbar
 
 //   1 - dars | Project haqida | YouTube Link
 // — Bu qanday project?
