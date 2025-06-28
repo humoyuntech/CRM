@@ -53,8 +53,8 @@ git push -u origin main
  */
 
 
-// git branch -M "006/Navbar"
-// git push -u origin "006/Navbar"
+// git branch -M "007/Generic-input"
+// git push -u origin "007/Generic-input"
 
 // 10-video
 // 001/CreateProject
@@ -63,6 +63,7 @@ git push -u origin main
 // 004/CreateSidebar
 // 005/ActivePath
 // 006/Navbar
+// 007/Generic-input
 
 //   1 - dars | Project haqida | YouTube Link
 // — Bu qanday project?
