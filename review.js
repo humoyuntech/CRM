@@ -56,7 +56,7 @@ git push -u origin main
 // git branch -M "007/Generic-input"
 // git push -u origin "007/Generic-input"
 
-// 10-video
+// 13-video
 // 001/CreateProject
 // 002/RouteConfig
 // 003/CRM_Structure
@@ -509,7 +509,6 @@ git push -u origin main
 // —  Get manager data
 // — Delete manager data
 // — Edit manager data
-
 
 // 78 - dars | Sozlamalar Mentor | Students
 // —  Get mentor data
