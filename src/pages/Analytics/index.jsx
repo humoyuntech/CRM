@@ -1,6 +1,7 @@
 import Subtitle from '../../components/Generics/Subtitle'
 import Title from '../../components/Generics/Title'
-import { Container, Wrapper, Card } from './style'
+import { privateData } from '../../utils/analitics'
+import { Container, Wrapper, Card, Section } from './style'
 
 const Analytics  = () => {
 
@@ -9,9 +10,15 @@ const Analytics  = () => {
     <Container> 
       <Title mb={16}>Analytics</Title>
       <Wrapper gap={24}>
-        <Card>1</Card>
-        <Card>2</Card>
-        <Card>3</Card>
+        {
+          privateData.map((value) => {
+            return (
+              <Card key={value.id}>
+                {value.title}
+              </Card>
+            )
+          })
+        }
       </Wrapper>
       <Subtitle mt={24} mb={16}>Ijtimoiy tarmoqlar</Subtitle>
       <Wrapper>
