@@ -21,7 +21,9 @@ const Analytics  = () => {
                 </Section>
                 
                 <Section title={value.title}>
-                  <Title> <Arrow /> <Counter>{value.count}</Counter> </Title> {" "} <Img/>
+                  <Title>
+                     <Arrow /> <Counter>{value.count}</Counter>
+                  </Title> {" "} <Img/>
                 </Section>
 
               </Card>
@@ -29,12 +31,34 @@ const Analytics  = () => {
           })
         }
       </Wrapper>
-      <Subtitle mt={24} mb={16}>Ijtimoiy tarmoqlar</Subtitle>
+
+    <Subtitle mt={24} mb={16}>
+        Ijtimoiy tarmoqlar
+      </Subtitle>
       <Wrapper>
-        <Card>1</Card>
-        <Card>2</Card>
-        <Card>3</Card>
+        {media.map((value) => {
+          const { icon: Icon } = value;
+          return (
+            <SubCard key={value.id} gap={24} title={value.title}>
+              {/* TOP */}
+              <Section title={value.title}>
+                <Subtitle>
+                  <Icon className="subicon" /> {value.title}
+                </Subtitle>{" "}
+                <Plus title={value.title} />
+              </Section>
+              {/* BOTTOM */}
+              <Section title={value.title}>
+                <Title color={"#52C41A"}>
+                  <Arrow /> 22%
+                </Title>
+                <Counter>{value.count}K</Counter>
+              </Section>
+            </SubCard>
+          );
+        })}
       </Wrapper>
+      
       <Wrapper>
         <Card>1</Card>
         <Card>2</Card>
