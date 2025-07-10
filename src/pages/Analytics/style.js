@@ -3,6 +3,29 @@ import getValue from "../../hooks/getStyleValue";
 import Title from "../../components/Generics/Title";
 import arrowUp from "../../assets/icons/arrowUp.svg?react";
 
+const getColor = (title) => {
+  switch (title) {
+    case "Talabalar":
+      return {
+        primary: "rgba(82, 196, 26, 1)",
+        secondary: "rgba(183, 235, 143, 1)",
+        ternary: "rgba(246, 255, 237, 1)",
+      };
+    case "Mentorlar":
+      return {
+        primary: "rgba(250, 219, 20, 1)",
+        secondary: "rgba(255, 229, 143, 1)",
+        ternary: "rgba(255, 251, 230, 1)",
+      };
+    case "Filiallar":
+      return {
+        primary: "rgba(24, 144, 255, 1)",
+        secondary: "rgba(145, 213, 255, 1)",
+        ternary: "rgba(230, 247, 255, 1)",
+      };
+  }
+};
+
 const Container = styled.div`
   padding: 24px;
   border-radius: 8px;
@@ -18,14 +41,13 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  border-radius: 5px;
   padding: 24px;
   padding-bottom: 0;
   gap: ${({ gap }) => getValue(gap, "16px")};
-  
-  
-  `;
-/* background-color: ${({ title }) => getColor(title)?.ternary}; */
+  background-color: ${({ title }) => getColor(title)?.ternary};
+`;
 
 
 const Section = styled(Wrapper)`
@@ -39,7 +61,6 @@ const Section = styled(Wrapper)`
     border-radius: 6px;
     padding: 8px;
     background-color: ${({ title }) => getColor(title)?.primary};
-
     margin-right: 16px;
     & path {
       fill: white;
@@ -48,7 +69,8 @@ const Section = styled(Wrapper)`
   .subicon {
     margin-right: 16px;
   }
-`;
+  `;
+
 
 const Plus = styled.div`
   &::before {
@@ -65,15 +87,15 @@ const Plus = styled.div`
     color: white;
     font-weight: 600;
     font-size: 32px;
-    background-color: ${({ title }) => getColor(title)?.secondary};
-
+    background-color: rgba(255, 229, 143, 1);
     border-radius: 50%;
+    background-color: ${({ title }) => getColor(title)?.secondary};
   }
   &:active {
     transform: scale(0.97);
   }
   cursor: pointer;
-`;
+  `;
 
 const Counter = styled(Title)`
   font-size: 40px;
@@ -91,4 +113,4 @@ const SubCard = styled(Card)`
   border: 1px solid rgba(240, 240, 240, 1);
 `;
 
-export {Container, Wrapper, Card, Section}
+export {Container, Wrapper, Card, Section, Plus, Counter, Arrow, SubCard}
