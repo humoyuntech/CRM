@@ -38,7 +38,7 @@ const Body = styled.div`
 `;
 
 const Wrapper = styled.div`
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     margin: 16px;
     background-color: white;
 `

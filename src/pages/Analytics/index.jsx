@@ -1,7 +1,7 @@
 import Subtitle from '../../components/Generics/Subtitle'
 import Title from '../../components/Generics/Title'
-import { privateData } from '../../utils/analitics'
-import { Container, Wrapper, Card, Section } from './style'
+import { privateData, media } from '../../utils/analitics'
+import { Container, Wrapper, Card, Section, Plus, Counter, Arrow, SubCard } from './style'
 
 const Analytics  = () => {
 
@@ -12,9 +12,18 @@ const Analytics  = () => {
       <Wrapper gap={24}>
         {
           privateData.map((value) => {
+              const { icon: Icon } = value;
+              const { img: Img } = value;
             return (
-              <Card key={value.id}>
-                {value.title}
+              <Card key={value.id} gap={24} title={value.title}>
+                <Section title={value.title}>
+                  <Title> <Icon className="icon" /> {value.title} </Title> {" "} <Plus title={value.title}/>
+                </Section>
+                
+                <Section title={value.title}>
+                  <Title> <Arrow /> <Counter>{value.count}</Counter> </Title> {" "} <Img/>
+                </Section>
+
               </Card>
             )
           })
