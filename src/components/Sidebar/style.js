@@ -41,6 +41,7 @@ const Wrapper = styled.div`
     /* border: 2px solid blue; */
     margin: 16px;
     background-color: white;
+    border-radius: 8px;
 `
 
 const Logo = styled.div`

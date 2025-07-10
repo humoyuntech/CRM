@@ -50,13 +50,15 @@ git remote add origin https://github.com/humoyuntech/CRM.git
 git branch -M main
 git push -u origin main
 
+git commit -m "Analytics-4"
+
  */
 
 
 // git branch -M "008/AnalyticsPage"
 // git push -u origin "008/AnalyticsPage"
 
-// 15-video
+// 16-video
 
 // 001/CreateProject
 // 002/RouteConfig

@@ -59,10 +59,10 @@ export const media = [
     icon: lnIcon,
     count: 3,
   },
-  {
-    id: 5,
-    title: "Tiktok",
-    icon: lnIcon,
-    count: 3,
-  },
+  // {
+  //   id: 5,
+  //   title: "Tiktok",
+  //   icon: lnIcon,
+  //   count: 3,
+  // },
 ];
