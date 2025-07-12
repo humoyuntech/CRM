@@ -50,7 +50,7 @@ git remote add origin https://github.com/humoyuntech/CRM.git
 git branch -M main
 git push -u origin main
 
-git commit -m "Analytics-4"
+git commit -m "Analytics-5"
 
  */
 
@@ -67,6 +67,7 @@ git commit -m "Analytics-4"
 // 005/ActivePath
 // 006/Navbar
 // 007/Generic-input
+// 008/AnalyticsPage
 
 //   1 - dars | Project haqida | YouTube Link
 // — Bu qanday project?
