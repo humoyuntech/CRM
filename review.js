@@ -55,10 +55,10 @@ git commit -m "Analytics-5"
  */
 
 
-// git branch -M "008/AnalyticsPage"
-// git push -u origin "008/AnalyticsPage"
+// git branch -M "009/GenericData"
+// git push -u origin "009/GenericData"
 
-// 16-video
+// 18-video
 
 // 001/CreateProject
 // 002/RouteConfig
@@ -68,6 +68,7 @@ git commit -m "Analytics-5"
 // 006/Navbar
 // 007/Generic-input
 // 008/AnalyticsPage
+// 009/GenericData
 
 //   1 - dars | Project haqida | YouTube Link
 // — Bu qanday project?
