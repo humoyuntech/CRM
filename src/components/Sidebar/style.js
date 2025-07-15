@@ -8,121 +8,106 @@ const Arrow = styled(arrow)`
   margin-left: auto;
   transform: ${({ active }) => active === "true" && `rotate(90deg)`};
   transition: all 0.1s;
+  /* z-index: 0; */
 `;
 
 const Container = styled.div`
-    display: flex;
+  display: flex;
 `;
-
 const Side = styled.div`
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 280px;
-    max-width: 280px;
-    min-width: 280px;
-    background-color: white;
-    height: 100vh;
-    overflow-y: hidden;
-    overflow-y: scroll;
-    &::-webkit-scrollbar{
-        width: 0;
-    }
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 280px;
+  max-width: 280px;
+  min-width: 280px;
+  background-color: white;
+  /* border: 2px solid red; */
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 `;
-
 const Body = styled.div`
-    flex: 1;
-    height: 100vh;
-    overflow: hidden;
-    overflow-y: scroll;
+  flex: 1;
+  height: 100vh;
+  min-width: calc(1440px - 280px);
+  /* border: 2px solid blue; */
+  overflow-y: scroll;
 `;
 
 const Wrapper = styled.div`
-    /* border: 2px solid blue; */
-    margin: 16px;
-    background-color: white;
-    border-radius: 8px;
-`
-
-const Logo = styled.div`
-    display: flex;
-    font-weight: 600;
-    font-size: 25px;
-    line-height: 28px;
-    color: rgba(24, 144, 255, 1);
-    padding: 16px 24px;
-    border-bottom: 1px solid rgba(248, 250, 252, 1);
-    cursor: pointer;
-
-    background-color: white;
-    position: sticky;
-    top: 0;
-
-    z-index: 999;
-`
-
-const LogOut =styled(Logo)`
-    display: flex;
-    align-items: center;
-    margin-top: auto;
-    border-top: 1px solid rgba(248, 250, 252, 1);
-    border-bottom: none;
-    position: sticky;
-    bottom: 0;
-    font-size: 20px;
-
-    &:hover{
-    background-color: #14AE5C;
-    color: white;
-    }
-    transition: all 1.5s ease; 
-
+  /* border: 2px solid blue; */
+  margin: 16px;
+  background-color: white;
+  border-radius: 8px;
 `;
- //===============PROFILE
+const Logo = styled.div`
+  position: sticky;
+  top: 0;
+  font-weight: 600;
+  size: 20px;
+  line-height: 28px;
+  color: rgba(24, 144, 255, 1);
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(222, 225, 227, 1);
+  cursor: pointer;
+  background-color: white;
+  z-index: 999;
+`;
 
- const ProfileContaier =styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 23px 24px 32px 24px;
- `
+const LogOut = styled(Logo)`
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  width: 100%;
+  position: sticky;
+  bottom: 0;
+  border-top: 1px solid rgba(222, 225, 227, 1);
+  border-bottom: 0;
+`;
+
+// PROFILE
+const ProfileContaier = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 23px 24px 32px 24px;
+`;
 
 ProfileContaier.Image = styled.img`
-    width:48px;
-    height: 48px;
-    border-radius: 50%;
-    margin-right: 16px;
-`
-
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 16px;
+`;
 ProfileContaier.Name = styled.div`
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    color: var(--primaryColor);
-
-    width: 168px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis
-
-`
-
+  width: 168px;
+  font-weight: 600;
+  size: 14px;
+  line-height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--primaryColor);
+`;
 ProfileContaier.Email = styled.div`
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 20px;
-    color: var(--secondaryColor);
+  width: 168px;
+  font-weight: 500;
+  size: 12px;
+  line-height: 20px;
+  color: var(--secondaryColor);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
 
-    width: 168px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis
-`
-//=============== Menu
-const Menu =styled.div`
-    display:flex;
-    flex-direction: column;
-
+// MENU
+const Menu = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const MenuItem = styled(NavLink)`
