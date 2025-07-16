@@ -12,33 +12,33 @@ export const AllLids = () => {
   let rows = [
     {
       id: 1,
-      name: "Webbrain",
+      name: "Khumoyun",
       group: "Frontend",
-      date: "21.05.2024",
-      addedDate: "21.05.2024",
-      admin: "Webbrain Admin",
+      date: "21.05.2025",
+      addedDate: "21.05.2025",
+      admin: "Humo Admin",
     },
     {
       id: 2,
-      name: "Webbrain",
+      name: "Bexruz",
       group: "Frontend",
-      date: "21.05.2024",
-      addedDate: "21.05.2024",
-      admin: "Webbrain Admin",
+      date: "21.05.2025",
+      addedDate: "21.05.2025",
+      admin: "Humo Admin",
     },
     {
       id: 3,
-      name: "Webbrain",
+      name: "Ilhom",
       group: "Frontend",
-      date: "21.05.2024",
-      addedDate: "21.05.2024",
-      admin: "Webbrain Admin",
+      date: "21.05.2025",
+      addedDate: "21.05.2025",
+      admin: "Humo Admin",
     },
   ];
 
   return (
     <Container>
-        <GenericTable headCells={headCells} />
+        <GenericTable headCells={headCells} rows={rows} />
     </Container>
   )
 }
