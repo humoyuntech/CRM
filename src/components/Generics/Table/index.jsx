@@ -1,14 +1,14 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import TableSortLabel from '@mui/material/TableSortLabel';
-import Paper from '@mui/material/Paper';
-import Checkbox from '@mui/material/Checkbox';
+/* eslint-disable react/prop-types */
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import Checkbox from "@mui/material/Checkbox";
 
 function EnhancedTableHead(props) {
   const { onSelectAllClick, numSelected, rowCount, headCells } = props;
@@ -22,16 +22,17 @@ function EnhancedTableHead(props) {
             indeterminate={numSelected > 0 && numSelected < rowCount}
             checked={rowCount > 0 && numSelected === rowCount}
             onChange={onSelectAllClick}
-            slotProps={{
-              'aria-label': 'select all desserts',
+            inputProps={{
+              "aria-label": "select all desserts",
             }}
           />
         </TableCell>
         {headCells.map((headCell) => (
-          <TableCell key={headCell.id}>
-            <TableSortLabel>
-              {headCell.label}
-            </TableSortLabel>
+          <TableCell
+            sx={{ color: "#929FAF", fontSize: "16px", cursor: "pointer" }}
+            key={headCell.id}
+          >
+            {headCell.label}
           </TableCell>
         ))}
       </TableRow>
@@ -39,10 +40,9 @@ function EnhancedTableHead(props) {
   );
 }
 
-//------Main Function
 export function GenericTable(props) {
-  const {headCells, rows} = props; 
   const [selected, setSelected] = React.useState([]);
+  const { headCells, rows, open } = props;
 
   const handleSelectAllClick = (event) => {
     if (event.target.checked) {
@@ -66,20 +66,36 @@ export function GenericTable(props) {
     } else if (selectedIndex > 0) {
       newSelected = newSelected.concat(
         selected.slice(0, selectedIndex),
-        selected.slice(selectedIndex + 1),
+        selected.slice(selectedIndex + 1)
       );
     }
     setSelected(newSelected);
   };
 
+  const isSelected = (id) => selected.indexOf(id) !== -1;
+
   return (
-    <Box sx={{ width: '100%' }}>
-      <Paper sx={{ width: '100%', mb: 2 }}>
+    <Box sx={{ width: "100%" }}>
+      <Box
+        sx={{
+          marginTop: "24px",
+          height: open ? "64px" : 0,
+          overflow: "hidden",
+          border: 0,
+        }}
+      >
+        <Table>
+          <TableBody>
+            <TableRow>
+              <TableCell sx={{ border: 0 }}>TEST</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </Box>
+
+      <Paper sx={{ width: "100%", mb: 2 }}>
         <TableContainer>
-          <Table
-            sx={{ minWidth: 750 }}
-            aria-labelledby="tableTitle"
-          >
+          <Table sx={{ minWidth: 750 }} aria-labelledby="tableTitle">
             <EnhancedTableHead
               numSelected={selected.length}
               onSelectAllClick={handleSelectAllClick}
@@ -88,7 +104,7 @@ export function GenericTable(props) {
             />
             <TableBody>
               {rows.map((row, index) => {
-                const isItemSelected = selected.includes(row.id);
+                const isItemSelected = isSelected(row.id);
                 const labelId = `enhanced-table-checkbox-${index}`;
 
                 return (
@@ -100,23 +116,27 @@ export function GenericTable(props) {
                     tabIndex={-1}
                     key={row.id}
                     selected={isItemSelected}
-                    sx={{ cursor: 'pointer' }}
+                    sx={{ cursor: "pointer" }}
                   >
                     <TableCell padding="checkbox">
                       <Checkbox
                         color="primary"
                         checked={isItemSelected}
                         inputProps={{
-                          'aria-labelledby': labelId,
+                          "aria-labelledby": labelId,
                         }}
                       />
                     </TableCell>
-                      {headCells.map((val) => (
-                      <TableCell align="left" key={val.id}>
-                         {row[val.id]}
+
+                    {headCells.map((val) => (
+                      <TableCell
+                        align="left"
+                        key={val.id}
+                        sx={{ color: "#253E5F" }}
+                      >
+                        {row[val.id]}
                       </TableCell>
                     ))}
-
                   </TableRow>
                 );
               })}
