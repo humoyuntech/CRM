@@ -5,7 +5,7 @@ import Navbar from "../Navbar"
 import Profile from "./profile"
 import myPhoto from "../../assets/images/Khumoyun.webp";
 import sidebar from "../../utils/sidebar"
-import { Breadcrumb } from '../Generics/BreadCrumb';
+// import { Breadcrumb } from '../Generics/BreadCrumb';
 
 export function Sidebar() {
   const [open, setOpen] = useState([]);
@@ -100,7 +100,7 @@ const onClickParent = ({ id, children, path, title }, e) => {
         <Body>
           <Navbar/>
           <Wrapper>
-            <Breadcrumb />
+            {/* <Breadcrumb /> */}
             <Outlet />
           </Wrapper>
         </Body>
