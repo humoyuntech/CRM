@@ -55,10 +55,10 @@ git commit -m "Analytics-5"
  */
 
 
-// git branch -M 011/GenericTable
-// git push -u origin 011/GenericTable
+// git branch -M 012/GenericButtun
+// git push -u origin 012/GenericButtun
 
-// 23-video
+// 24-video
 
 // 001/CreateProject
 // 002/RouteConfig
@@ -70,8 +70,8 @@ git commit -m "Analytics-5"
 // 008/AnalyticsPage
 // 009/GenericData
 // 010/Breadcrumb
-
-
+// 011/GenericTable
+// 012/GenericButtun
 
 
 
@@ -81,11 +81,12 @@ git commit -m "Analytics-5"
 // — Projectni uchun nimalar talab qilinadi?
 // — Project demo review.
 // — Projectda qanday kutubhonalar foydalanilgan.
+
 // 2 - dars | Create Project | YouTube Link
 // — yarn create vite
 // — format folder structure
-//     —  components / views / utils / root / hooks
-//     — Generic component yasash
+// — components / views / utils / root / hooks
+// — Generic component yasash
 // — link to github
 // — git branchga ajratish
 // — install packages
@@ -399,7 +400,6 @@ git commit -m "Analytics-5"
 // — get moliya data
 // — get email data
 
-
 // 55 - dars | Lids Page 
 // —  Git compare
 // —  Lids page
@@ -418,7 +418,6 @@ git commit -m "Analytics-5"
 // —  URL params usage
 // — Hooks replace/URL
 // — Hooks query/ URL
-
 
 // 57 /#2 - dars | Houzing URL Hooks 
 
@@ -447,7 +446,6 @@ git commit -m "Analytics-5"
 // — Manipulate modals
 // — Add Yangi talabalar
 // — Edit Yangi Talabalar
-
 
 // 62 - dars | Backend Students
 // —  Think like programmer
