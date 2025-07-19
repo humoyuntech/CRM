@@ -54,12 +54,6 @@ git commit -m "Analytics-5"
 
  */
 
-
-// git branch -M 012/GenericButtun
-// git push -u origin 012/GenericButtun
-
-// 24-video
-
 // 001/CreateProject
 // 002/RouteConfig
 // 003/CRM_Structure
@@ -72,7 +66,12 @@ git commit -m "Analytics-5"
 // 010/Breadcrumb
 // 011/GenericTable
 // 012/GenericButtun
+// 013/GenericSelect
 
+// git branch -M 013/GenericSelect
+// git push -u origin 013/GenericSelect
+
+// 25-video
 
 
 //   1 - dars | Project haqida | YouTube Link
