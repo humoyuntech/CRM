@@ -11,6 +11,7 @@ export const DateTime = () => {
         defaultValue={moment()}
         views={["year", "month", "day"]}
         slotProps={{ textField: { size: "small" } }}
+        sx={{maxWidth: "160px"}}
       />
     </LocalizationProvider>
   );
