@@ -68,11 +68,12 @@ git commit -m "Analytics-5"
 // 012/GenericButtun
 // 013/GenericSelect
 // 014/GenricFilter
+// 015/GenericModal
 
-// git branch -M 014/GenricFilter
-// git push -u origin 014/GenricFilter
+// git branch -M 015/GenericModal
+// git push -u origin 015/GenericModal
 
-// 26-video
+// 27-video
 
 
 //   1 - dars | Project haqida | YouTube Link
