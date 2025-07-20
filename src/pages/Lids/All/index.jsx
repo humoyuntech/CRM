@@ -4,9 +4,11 @@ import { Container, Action } from './style'
 import { Breadcrumb } from "../../../components/Generics/BreadCrumb";
 import GenericButton from '../../../components/Generics/Button';
 import GenericSelect from '../../../components/Generics/Select';
+import { Modal } from '../../../components/Generics/Modal';
 
 export const AllLids = () => {
     const [open, setOpen] = useState(false);
+     const [modalOpen, setModal] = useState(false);
 
     const onEdit = (e) => {
       e.stopPropagation();
@@ -68,27 +70,30 @@ export const AllLids = () => {
     ];
 
     return (
-      <Container>
-        <Breadcrumb>
-          <GenericButton type="import" onClick={() => setOpen(!open)}>
-            Import
-          </GenericButton>
-          <GenericButton type="filter" onClick={() => setOpen(!open)}>
-            Filter
-          </GenericButton>
-          <GenericButton type="add" onClick={() => setOpen(!open)}>
-            Buyurtma berish
-          </GenericButton>
-        </Breadcrumb>
-        <GenericTable open={open} headCells={headCells} rows={rows}>
-          <GenericSelect data={data1} />
-          <GenericSelect data={data1} />
-          <GenericSelect data={data1} />
-          <GenericSelect data={data1} />
-          <GenericSelect data={data1} />
-          <GenericSelect data={data1} />
-        </GenericTable>
-      </Container>
+        <Container>
+      <Modal open={modalOpen}>
+        <GenericButton type="add">Talaba qo'shish</GenericButton>
+      </Modal>
+      <Breadcrumb>
+        <GenericButton type="import" onClick={() => setOpen(!open)}>
+          Import
+        </GenericButton>
+        <GenericButton type="filter" onClick={() => setOpen(!open)}>
+          Filter
+        </GenericButton>
+        <GenericButton type="add" onClick={() => setModal(!modalOpen)}>
+          Lid qo'shish
+        </GenericButton>
+      </Breadcrumb>
+      <GenericTable open={open} headCells={headCells} rows={rows}>
+        <GenericSelect data={data1} />
+        <GenericSelect data={data1} />
+        <GenericSelect data={data1} />
+        <GenericSelect data={data1} />
+        <GenericSelect data={data1} />
+        <GenericSelect data={data1} />
+      </GenericTable>
+    </Container>
     );
 };
 
