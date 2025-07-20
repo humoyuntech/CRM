@@ -12,6 +12,7 @@ export const GenericSelect = (props) => {
   const handleChange = (event) => {
     setDefaultVal(event.target.value);
   };
+  
   return (
     <FormControl
       fullWidth
@@ -19,14 +20,14 @@ export const GenericSelect = (props) => {
       size="small"
     >
       <Select
-        sx={{ color: "#929FAF", borderColor: "#929FAF" }}
+        sx={{ color: "#929FAF", borderColor: "#929FAF", fontSize: "14px" }}
         value={defaultVal || "Select"}
         onChange={handleChange}
       >
         {data?.map((item) => {
           return (
             <MenuItem
-              sx={{ color: "#929FAF" }}
+              sx={{ color: "#929FAF", fontSize: "14px" }}
               key={item.value}
               value={item?.value}
             >
