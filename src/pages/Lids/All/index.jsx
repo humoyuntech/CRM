@@ -4,76 +4,80 @@ import { Container, Action } from './style'
 import { Breadcrumb } from "../../../components/Generics/BreadCrumb";
 import GenericButton from '../../../components/Generics/Button';
 import GenericSelect from '../../../components/Generics/Select';
-import { Modal } from '../../../components/Generics/Modal';
+import AllLidsModal from "./modal";
+
 
 export const AllLids = () => {
-    const [open, setOpen] = useState(false);
-     const [modalOpen, setModal] = useState(false);
+const [open, setOpen] = useState(false);
+  const [modalOpen, setModal] = useState(false);
+  const onEdit = (e) => {
+    e.stopPropagation();
+  };
+  const onMove = (e) => {
+    e.stopPropagation();
+  };
+  const headCells = [
+    { id: "name", label: "O'quvchining ismi" },
+    { id: "group", label: "Guruh / Fan" },
+    { id: "date", label: "Dars kuni va vaqti" },
+    { id: "addedDate", label: "Qo’shilgan sana" },
+    { id: "admin", label: "Moderator" },
+    {
+      id: "action",
+      label: "",
+      render: (
+        <Action>
+          <Action.Edit onClick={onEdit} />
+          <Action.Move onClick={onMove} />
+        </Action>
+      ),
+    },
+  ];
 
-    const onEdit = (e) => {
-      e.stopPropagation();
-    };
-
-    const onMove = (e) => {
-      e.stopPropagation();
-    };
-
-    const headCells = [
-      { id: "name", label: "O'quvchining ismi" },
-      { id: "group", label: "Guruh / Fan" },
-      { id: "date", label: "Dars kuni va vaqti" },
-      { id: "addedDate", label: "Qo’shilgan sana" },
-      { id: "admin", label: "Moderator" },
+let rows = [
       {
-        id: "action",
-        label: "",
-        render: (
-          <Action>
-            <Action.Edit onClick={onEdit} />
-            <Action.Move onClick={onMove} />
-          </Action>
-        ),
+        id: 1,
+        name: "Khumoyun",
+        group: "Frontend",
+        date: "21.05.2025",
+        addedDate: "21.05.2025",
+        admin: "Humo Admin",
       },
-    ];
+      {
+        id: 2,
+        name: "Bexruz",
+        group: "Frontend",
+        date: "21.05.2025",
+        addedDate: "21.05.2025",
+        admin: "Humo Admin",
+      },
+      {
+        id: 3,
+        name: "Ilhom",
+        group: "Frontend",
+        date: "21.05.2025",
+        addedDate: "21.05.2025",
+        admin: "Humo Admin",
+      },
+  ];
 
-    let rows = [
-        {
-          id: 1,
-          name: "Khumoyun",
-          group: "Frontend",
-          date: "21.05.2025",
-          addedDate: "21.05.2025",
-          admin: "Humo Admin",
-        },
-        {
-          id: 2,
-          name: "Bexruz",
-          group: "Frontend",
-          date: "21.05.2025",
-          addedDate: "21.05.2025",
-          admin: "Humo Admin",
-        },
-        {
-          id: 3,
-          name: "Ilhom",
-          group: "Frontend",
-          date: "21.05.2025",
-          addedDate: "21.05.2025",
-          admin: "Humo Admin",
-        },
-    ];
+  const data1 = [
+    { value: "uzbek", title: "Uzbek" },
+    { value: "russian", title: "Russian" },
+    { value: "english", title: "English" },
+  ];
 
-    const data1 = [
-      { value: "uzbek", title: "Uzbek" },
-      { value: "russian", title: "Russian" },
-      { value: "english", title: "English" },
-    ];
+  const onToggleModal = () => {
+    setModal(!modalOpen);
+  };
 
-    return (
-        <Container>
-      <Modal open={modalOpen}>
-        <GenericButton type="add">Talaba qo'shish</GenericButton>
-      </Modal>
+  const onSave = () => {
+    // setModal(!modalOpen);
+  };
+  
+  return (
+    <Container>
+      <AllLidsModal open={modalOpen} onClose={onToggleModal} onSave={onSave} />
       <Breadcrumb>
         <GenericButton type="import" onClick={() => setOpen(!open)}>
           Import
@@ -81,7 +85,7 @@ export const AllLids = () => {
         <GenericButton type="filter" onClick={() => setOpen(!open)}>
           Filter
         </GenericButton>
-        <GenericButton type="add" onClick={() => setModal(!modalOpen)}>
+        <GenericButton type="add" onClick={onToggleModal}>
           Lid qo'shish
         </GenericButton>
       </Breadcrumb>
@@ -94,7 +98,7 @@ export const AllLids = () => {
         <GenericSelect data={data1} />
       </GenericTable>
     </Container>
-    );
+  );
 };
 
 export default AllLids

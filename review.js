@@ -69,11 +69,12 @@ git commit -m "Analytics-5"
 // 013/GenericSelect
 // 014/GenricFilter
 // 015/GenericModal
+// 016/LidsModal
 
-// git branch -M 015/GenericModal
-// git push -u origin 015/GenericModal
+// git branch -M 016/LidsModal
+// git push -u origin 016/LidsModal
 
-// 27-video
+// 28-video
 
 
 //   1 - dars | Project haqida | YouTube Link
@@ -266,17 +267,17 @@ git commit -m "Analytics-5"
 
 // 32 - dars | Guruhlar Page 
 // — Undestanding git merge 
-// —  Guruhlar navigation config
-// —  Creating Archive page
-// —  Generic table checking config
+// — Guruhlar navigation config
+// — Creating Archive page
+// — Generic table checking config
 
 // 33 - dars | Xonalar
-// —  Bug fix
+// — Bug fix
 // — Create xonalar mock data
 // — Create xonalar UI
 
 // 34 - dars | Checking Page 
-// —  Create checkin UI
+// — Create checkin UI
 // — Create logic for data structre
 // — Create checkin navigation
 
