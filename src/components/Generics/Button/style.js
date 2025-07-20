@@ -63,8 +63,9 @@ Button.Primay = styled(Button)`
 Button.Delete = styled(Button)`
   border-color: #ffa39e;
   color: #f5222d;
-  border: 0;
+  border: 1px solid;
 `;
+
 
 export { Button };
 export default Button
