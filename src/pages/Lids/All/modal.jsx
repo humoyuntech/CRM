@@ -6,6 +6,15 @@ import GenericSelect from "../../../components/Generics/Select";
 import Title from "../../../components/Generics/Title";
 
 export const AllLidsModal = (props) => {
+
+  const { data } = props;
+
+  const selectData = data && [
+    { value: "Frontend", title: "Frontend" },
+    { value: "Backend", title: "Backend" },
+  ];
+
+
   return (
     <Modal {...props}>
       <Title size="34px">Lid Qo'shish</Title>
@@ -13,27 +22,27 @@ export const AllLidsModal = (props) => {
       <Subtitle mt={16} mb={8} color={"#929FAF"}>
         Studentning ismi
       </Subtitle>
-      <GenericInput fontWeight={500} width={500} />
+      <GenericInput fontWeight={500} width={500} value={data?.name} />
       {/* yo'nalish */}
       <Subtitle mt={16} mb={8} color={"#929FAF"}>
         Yo'nalishni tanlang
       </Subtitle>
-      <GenericSelect width={"100%"} />
+      <GenericSelect data={selectData} width={"100%"} value={data?.group} />
       {/* daraja */}
       <Subtitle mt={16} mb={8} color={"#929FAF"}>
         Darajangizni tanlang
       </Subtitle>
-      <GenericSelect width={"100%"} />
+      <GenericSelect data={selectData} width={"100%"} value={data?.level} />
       {/* Kun */}
       <Subtitle mt={16} mb={8} color={"#929FAF"}>
         Kun tanlang
       </Subtitle>
-      <GenericSelect width={"100%"} />
+      <GenericSelect data={selectData} width={"100%"} value={data?.days} />
       {/* Kelish sanasi */}
       <Subtitle mt={16} mb={8} color={"#929FAF"}>
         Boshlash sanasini tanlang
       </Subtitle>
-      <GenericSelect width={"100%"} />
+      <GenericSelect data={selectData} width={"100%"} value={data?.date} />
       {/* izoh */}
       <Subtitle mt={16} mb={8} color={"#929FAF"}>
         Izoh
@@ -44,3 +53,5 @@ export const AllLidsModal = (props) => {
 };
 
 export default AllLidsModal;
+
+//yozdim 30

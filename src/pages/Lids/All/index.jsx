@@ -8,10 +8,14 @@ import AllLidsModal from "./modal";
 
 
 export const AllLids = () => {
-const [open, setOpen] = useState(false);
+
+    const [open, setOpen] = useState(false);
   const [modalOpen, setModal] = useState(false);
-  const onEdit = (e) => {
+  const [modalProps, setModalProps] = useState({});
+  const onEdit = (e, res) => {
     e.stopPropagation();
+    setModal(!modalOpen);
+    setModalProps(res);
   };
   const onMove = (e) => {
     e.stopPropagation();
@@ -25,41 +29,48 @@ const [open, setOpen] = useState(false);
     {
       id: "action",
       label: "",
-      render: (
+      render: (res) => (
         <Action>
-          <Action.Edit onClick={onEdit} />
+          <Action.Edit onClick={(e) => onEdit(e, res)} />
           <Action.Move onClick={onMove} />
         </Action>
       ),
     },
   ];
 
-let rows = [
-      {
-        id: 1,
-        name: "Khumoyun",
-        group: "Frontend",
-        date: "21.05.2025",
-        addedDate: "21.05.2025",
-        admin: "Humo Admin",
-      },
-      {
-        id: 2,
-        name: "Bexruz",
-        group: "Frontend",
-        date: "21.05.2025",
-        addedDate: "21.05.2025",
-        admin: "Humo Admin",
-      },
-      {
-        id: 3,
-        name: "Ilhom",
-        group: "Frontend",
-        date: "21.05.2025",
-        addedDate: "21.05.2025",
-        admin: "Humo Admin",
-      },
-  ];
+
+  let rows = [
+        {
+          id: 1,
+          name: "Khumoyun",
+          group: "Frontend",
+          days: "toq kunlari",
+          date: "21.05.2025",
+          addedDate: "21.05.2025",
+          admin: "Humo Admin",
+          level: "Beginer",
+        },
+        {
+          id: 2,
+          name: "Bexruz",
+          group: "Frontend",
+          days: "toq kunlari",
+          date: "21.05.2025",
+          addedDate: "21.05.2025",
+          admin: "Humo Admin",
+          level: "Beginer",
+        },
+        {
+          id: 3,
+          name: "Ilhom",
+          group: "Frontend",
+          days: "toq kunlari",
+          date: "21.05.2025",
+          addedDate: "21.05.2025",
+          admin: "Humo Admin",
+          level: "Beginer",
+        },
+    ];
 
   const data1 = [
     { value: "uzbek", title: "Uzbek" },
@@ -67,17 +78,21 @@ let rows = [
     { value: "english", title: "English" },
   ];
 
-  const onToggleModal = () => {
+   const onToggleModal = () => {
     setModal(!modalOpen);
+    setModalProps(null);
   };
-
   const onSave = () => {
     // setModal(!modalOpen);
   };
-  
   return (
     <Container>
-      <AllLidsModal open={modalOpen} onClose={onToggleModal} onSave={onSave} />
+      <AllLidsModal
+        data={modalProps}
+        open={modalOpen}
+        onClose={onToggleModal}
+        onSave={onSave}
+      />
       <Breadcrumb>
         <GenericButton type="import" onClick={() => setOpen(!open)}>
           Import
@@ -102,3 +117,5 @@ let rows = [
 };
 
 export default AllLids
+
+//yozdim 30
