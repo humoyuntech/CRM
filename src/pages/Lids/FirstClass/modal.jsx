@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
 import { Modal } from "../../../components/Generics/Modal";
 import GenericInput from "../../../components/Generics/Input";
@@ -7,12 +6,15 @@ import GenericSelect from "../../../components/Generics/Select";
 import Title from "../../../components/Generics/Title";
 
 export const AllLidsModal = (props) => {
+
   const { data } = props;
+
   const selectData = data && [
     { value: "Frontend", title: "Frontend" },
     { value: "Backend", title: "Backend" },
   ];
-  console.log(data, "data");
+
+
   return (
     <Modal {...props}>
       <Title size="34px">Lid Qo'shish</Title>

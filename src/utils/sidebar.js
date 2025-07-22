@@ -11,10 +11,9 @@ import Settings from "../assets/icons/setting.svg?react";
 import { Generics } from "../view/Generics";
 import AnalyticsView from "../view/AnalitikaView";
 import LidsAllView from "../view/Lids/All";
+import FirstClassView from "../view/Lids/FirstClass";
+import NewStudentView from "../view/Lids/New";
 
-
-// import FirstClassView from "../views/FirstClass";
-// import NewStudentsView from "../views/NewStudents";
 // import GroupsView from "../views/GroupsView";
 // import GroupsRoomView from "../views/GroupsRoom";
 
@@ -50,7 +49,7 @@ const sidebar = [
         title: "Birinchi dars",
         path: "/lidlar/first-class",
         isPrivate: true,
-        element: Generics,
+        element: FirstClassView,
         role: ["admin", "manager"],
       },
       {
@@ -58,7 +57,7 @@ const sidebar = [
         title: "Yangi talabalar",
         path: "/lidlar/new-students",
         isPrivate: true,
-        element: Generics,
+        element: NewStudentView,
         role: ["admin", "manager"],
       },
     ],

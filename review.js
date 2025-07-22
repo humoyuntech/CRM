@@ -71,11 +71,12 @@ git commit -m "Analytics-5"
 // 015/GenericModal
 // 016/LidsModal
 // 017/LidsEditModal
+// 018/firstClass
 
-// git branch -M 017/LidsEditModal
-// git push -u origin 017/LidsEditModal
+// git branch -M 018/firstClass
+// git push -u origin 018/firstClass
 
-// 29-video
+// 30-video
 
 
 //   1 - dars | Project haqida | YouTube Link
