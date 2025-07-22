@@ -50,8 +50,6 @@ git remote add origin https://github.com/humoyuntech/CRM.git
 git branch -M main
 git push -u origin main
 
-git commit -m "Analytics-5"
-
  */
 
 // 001/CreateProject
@@ -72,11 +70,12 @@ git commit -m "Analytics-5"
 // 016/LidsModal
 // 017/LidsEditModal
 // 018/firstClass
+// 019/PageStudens
 
-// git branch -M 018/firstClass
-// git push -u origin 018/firstClass
+// git branch -M 019/PageStudens
+// git push -u origin 019/PageStudens
 
-// 30-video
+// 31-video
 
 
 //   1 - dars | Project haqida | YouTube Link

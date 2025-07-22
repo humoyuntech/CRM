@@ -13,9 +13,9 @@ import AnalyticsView from "../view/AnalitikaView";
 import LidsAllView from "../view/Lids/All";
 import FirstClassView from "../view/Lids/FirstClass";
 import NewStudentView from "../view/Lids/New";
-
-// import GroupsView from "../views/GroupsView";
-// import GroupsRoomView from "../views/GroupsRoom";
+import AllStudentsView from "../view/Students/All";
+import ActiveStudentsView from "../view/Students/Active";
+import ArchiveStudentsView from "../view/Students/Archive";
 
 const sidebar = [
   {
@@ -62,15 +62,15 @@ const sidebar = [
       },
     ],
   },
-  {
-    id: 3,
-    title: "Moliya",
-    path: "/moliya",
-    isPrivate: true,
-    icon: Finance,
-    element: Generics,
-    role: ["admin"],
-  },
+  // {
+  //   id: 3,
+  //   title: "Moliya",
+  //   path: "/moliya",
+  //   isPrivate: true,
+  //   icon: Finance,
+  //   element: Generics,
+  //   role: ["admin"],
+  // },
   {
     id: 4,
     title: "Talabalar",
@@ -85,23 +85,23 @@ const sidebar = [
         title: "Barcha talabalar",
         path: "/talabalar/all-talabalar",
         isPrivate: true,
-        element: Generics,
+        element: AllStudentsView,
         role: ["admin", "manager"],
       },
-      {
-        id: `4-2`,
-        title: "Davomat",
-        path: "/talabalar/davomat",
-        isPrivate: true,
-        element: Generics,
-        role: ["admin", "manager"],
-      },
+      // {
+      //   id: `4-2`,
+      //   title: "Davomat",
+      //   path: "/talabalar/davomat",
+      //   isPrivate: true,
+      //   element: Generics,
+      //   role: ["admin", "manager"],
+      // },
       {
         id: `4-3`,
         title: "Aktive",
         path: "/talabalar/active",
         isPrivate: true,
-        element: Generics,
+        element: ActiveStudentsView,
         role: ["admin", "manager"],
       },
       {
@@ -109,17 +109,17 @@ const sidebar = [
         title: "Arxiv",
         path: "/talabalar/archive",
         isPrivate: true,
-        element: Generics,
+        element: ArchiveStudentsView,
         role: ["admin", "manager"],
       },
-      {
-        id: `4-5`,
-        title: "Ota-onalar",
-        path: "/talabalar/parents",
-        isPrivate: true,
-        element: Generics,
-        role: ["admin", "manager"],
-      },
+      // {
+      //   id: `4-5`,
+      //   title: "Ota-onalar",
+      //   path: "/talabalar/parents",
+      //   isPrivate: true,
+      //   element: Generics,
+      //   role: ["admin", "manager"],
+      // },
     ],
   },
   {
