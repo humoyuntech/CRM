@@ -12,7 +12,7 @@ import Checkbox from "@mui/material/Checkbox";
 
 
 function EnhancedTableHead(props) {
-   const { onSelectAllClick, numSelected, rowCount, headCells } = props;
+  const { onSelectAllClick, numSelected, rowCount, headCells } = props;
 
   return (
     <TableHead>
@@ -88,7 +88,7 @@ export function GenericTable(props) {
       >
         <Table>
           <TableBody>
-            <TableRow sx={{ display: "flex", justifyContent: "space-between" }}>
+            <TableRow sx={{ display: "flex", gap: 5 }}>
               {props?.children}
             </TableRow>
           </TableBody>
