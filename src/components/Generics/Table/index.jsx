@@ -9,10 +9,10 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Checkbox from "@mui/material/Checkbox";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import React, { useState } from "react";
 
 function EnhancedTableHead(props) {
- const { onSelectAllClick, numSelected, rowCount, headCells, checkbox } =
+  const { onSelectAllClick, numSelected, rowCount, headCells, checkbox } =
     props;
 
   return (
@@ -39,6 +39,7 @@ function EnhancedTableHead(props) {
               cursor: "pointer",
               whiteSpace: "nowrap",
             }}
+            align={headCell?.align || "left"}
             key={headCell.id}
           >
             {headCell.label}
@@ -147,7 +148,7 @@ export function GenericTable(props) {
 
                     {headCells.map((val) => (
                       <TableCell
-                        align="left"
+                        align={val?.align || "left"}
                         key={val.id}
                         sx={{ color: "#253E5F" }}
                       >
@@ -172,4 +173,4 @@ export function GenericTable(props) {
   );
 }
 
-export default GenericTable
+export default GenericTable;
