@@ -5,7 +5,7 @@ import Navbar from "../Navbar"
 import Profile from "./profile"
 import myPhoto from "../../assets/images/Khumoyun.webp";
 import sidebar from "../../utils/sidebar"
-// import { Breadcrumb } from '../Generics/BreadCrumb';
+
 
 export function Sidebar() {
   const [open, setOpen] = useState([]);
@@ -23,13 +23,11 @@ export function Sidebar() {
   const onClickLogo = () => {
     navigate("/");
   };
-
   const onLogOut = () => {
     navigate("/login");
   };
-  
 
-const onClickParent = ({ id, children, path, title }, e) => {
+  const onClickParent = ({ id, children, path, title }, e) => {
     e.preventDefault();
 
     if (open?.includes(id)) {
@@ -44,17 +42,15 @@ const onClickParent = ({ id, children, path, title }, e) => {
       navigate(path, { state: { parent: title } });
     }
   };
-
   const onClickChild = (parent, child, path, e) => {
-  e.preventDefault();
-  navigate(path, { state: { parent, child }});
+    e.preventDefault();
+    navigate(path, { state: { parent, child } });
   };
-
   return (
     <Container>
       <Side>
-        <Logo onClick={onClickLogo}>Humo CRM</Logo>
-        <Profile name={"Rustamov Khumoyun"} email={"humoyuntech@gmail.com"} photo={myPhoto}/>
+        <Logo onClick={onClickLogo}>Webbrain CRM</Logo>
+         <Profile name={"Rustamov Khumoyun"} email={"humoyuntech@gmail.com"} photo={myPhoto}/>
         <Menu>
           {sidebar.map((parent) => {
             const active = open.includes(parent.id);
@@ -80,8 +76,12 @@ const onClickParent = ({ id, children, path, title }, e) => {
                       <MenuItem
                         key={child?.id}
                         to={child.path}
-                        onClick={(e)=> onClickChild(parent.title, child.title, child.path, e)}
-                        active={(location.pathname === child.path).toString()}
+                        onClick={(e) =>
+                          onClickChild(parent.title, child.title, child.path, e)
+                        }
+                        active={location.pathname
+                          ?.includes(child.path)
+                          .toString()}
                       >
                         <MenuItem.Title>{child?.title}</MenuItem.Title>
                       </MenuItem>
@@ -97,15 +97,14 @@ const onClickParent = ({ id, children, path, title }, e) => {
           <ExitIcon /> Chiqish
         </LogOut>
       </Side>
-        <Body>
-          <Navbar/>
-          <Wrapper>
-            {/* <Breadcrumb /> */}
-            <Outlet />
-          </Wrapper>
-        </Body>
+      <Body>
+        <Navbar />
+        <Wrapper>
+          <Outlet />
+        </Wrapper>
+      </Body>
     </Container>
-  )
-}
+  );
+};
 
 export default Sidebar;
