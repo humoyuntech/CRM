@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-// Ok-----------------------
 import { useState } from "react";
 import GenericTable from '../../../components/Generics/Table'
 import { Container, Action } from './style'
@@ -56,6 +55,7 @@ export const Guruhlar = () => {
       kurs: "JavaScript",
       completed: false,
     },
+
     {
       id: 1,
       group: "Frontend",
@@ -70,6 +70,7 @@ export const Guruhlar = () => {
       kurs: "JavaScript",
       completed: false,
     },
+
     {
       id: 1,
       group: "Frontend",
@@ -84,6 +85,7 @@ export const Guruhlar = () => {
       kurs: "JavaScript",
       completed: false,
     },
+
   ];
   // const data1 = [
   //   { value: "uzbek", title: "Uzbek" },

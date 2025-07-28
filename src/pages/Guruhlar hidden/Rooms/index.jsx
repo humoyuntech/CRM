@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import GenericTable from '../../../components/Generics/Table'
 import { Container, Action } from './style'
@@ -58,6 +59,7 @@ export const Rooms = () => {
       ),
     },
   ];
+  
   let rows = [
     {
       id: 1,
@@ -90,11 +92,7 @@ export const Rooms = () => {
       status: "Ishlayabdi",
     },
   ];
-  // const data1 = [
-  //   { value: "uzbek", title: "Uzbek" },
-  //   { value: "russian", title: "Russian" },
-  //   { value: "english", title: "English" },
-  // ];
+
 
   const onToggleModal = () => {
     setModal(!modalOpen);

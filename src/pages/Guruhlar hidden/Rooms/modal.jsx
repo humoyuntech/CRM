@@ -6,6 +6,7 @@ import Subtitle from "../../../components/Generics/Subtitle";
 import GenericSelect from "../../../components/Generics/Select";
 import Title from "../../../components/Generics/Title";
 
+
 export const AllLidsModal = (props) => {
   const { data } = props;
   const selectData = data && [

@@ -1,10 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
-import { Modal } from "../../../components/Generics/Modal";
-import GenericInput from "../../../components/Generics/Input";
-import Subtitle from "../../../components/Generics/Subtitle";
-import GenericSelect from "../../../components/Generics/Select";
-import Title from "../../../components/Generics/Title";
+import { Modal } from "../../Generics/Modal";
+import GenericInput from "../../Generics/Input";
+import Subtitle from "../../Generics/Subtitle";
+import GenericSelect from "../../Generics/Select";
+import Title from "../../Generics/Title";
 
 export const AllLidsModal = (props) => {
   const { data } = props;
