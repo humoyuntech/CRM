@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -9,7 +10,6 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Checkbox from "@mui/material/Checkbox";
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
 
 function EnhancedTableHead(props) {
   const { onSelectAllClick, numSelected, rowCount, headCells, checkbox } =
@@ -51,7 +51,7 @@ function EnhancedTableHead(props) {
 }
 
 export function GenericTable(props) {
-  const [selected, setSelected] = useState([]);
+  const [selected, setSelected] = React.useState([]);
   const { headCells, rows, open, checkbox = true, url } = props;
   const navigate = useNavigate();
 
