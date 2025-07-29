@@ -4,7 +4,7 @@ import { useState } from "react";
 
 export const GenericSelect = (props) => {
   const { data, width } = props;
-
+  console.log(props.mt, "props");
   const [defaultVal, setDefaultVal] = useState(
     props?.value || (data && data[0]?.value)
   );
@@ -15,7 +15,11 @@ export const GenericSelect = (props) => {
   return (
     <FormControl
       fullWidth
-      sx={{ m: 0, minWidth: 120, width: width || 150 }}
+      sx={{
+        m: 0,
+        minWidth: 120,
+        width: width || 150,
+      }}
       size="small"
     >
       <Select
@@ -40,5 +44,3 @@ export const GenericSelect = (props) => {
 };
 
 export default GenericSelect;
-
-//yozdim
