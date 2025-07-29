@@ -74,11 +74,12 @@ git push -u origin main
 // 020/GroupsPage
 // 021/CheckinStatus
 // 022/CheckinModal
+// 023/hrPage
 
-// git branch -M 022/CheckinModal
-// git push -u origin 022/CheckinModal
+// git branch -M 023/hrPage
+// git push -u origin 023/hrPage
 
-// 37-video
+// 38-video
 
 
 //   1 - dars | Project haqida | YouTube Link
