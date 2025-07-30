@@ -5,7 +5,6 @@ export const Container = styled.div``;
 export const Action = styled.div`
   display: flex;
   justify-content: flex-end;
-  /* gap: 18px; */
   z-index: 9999;
 `;
 
@@ -46,4 +45,5 @@ Devider.Title = styled.div`
 export const Section = styled.div`
   display: flex;
   padding: 12px 0;
+  align-items: center;
 `;

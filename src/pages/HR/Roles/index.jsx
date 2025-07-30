@@ -4,7 +4,7 @@ import GenericTable from '../../../components/Generics/Table'
 import { Container, Action } from './style'
 import { Breadcrumb } from "../../../components/Generics/BreadCrumb";
 import GenericButton from '../../../components/Generics/Button';
-import AllLidsModal from "./modal"
+import AllLidsModal from "./modal";
 
 export const Roles = () => {
   const [modalOpen, setModal] = useState(false);
@@ -80,7 +80,7 @@ export const Roles = () => {
           Filter
         </GenericButton> */}
         <GenericButton type="add" onClick={onToggleModal}>
-          Xona qo'shish
+          Ro'li qo'shish
         </GenericButton>
       </Breadcrumb>
       <GenericTable
