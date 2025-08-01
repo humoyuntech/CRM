@@ -76,12 +76,13 @@ git push -u origin main
 // 022/CheckinModal
 // 023/hrPage
 // 024/RoleModal
+// 025/SelectableTable
 
 
-// git branch -M 024/RoleModal
-// git push -u origin 024/RoleModal
+// git branch -M 025/SelectableTable
+// git push -u origin 025/SelectableTable
 
-// 39-video
+// 40-video
 
 
 //   1 - dars | Project haqida | YouTube Link
