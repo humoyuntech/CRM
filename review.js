@@ -77,12 +77,13 @@ git push -u origin main
 // 023/hrPage
 // 024/RoleModal
 // 025/SelectableTable
+// 026/TableCollapse
 
 
-// git branch -M 025/SelectableTable
-// git push -u origin 025/SelectableTable
+// git branch -M 026/TableCollapse
+// git push -u origin 026/TableCollapse
 
-// 40-video
+// 41-video
 
 
 //   1 - dars | Project haqida | YouTube Link

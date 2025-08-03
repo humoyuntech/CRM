@@ -20,7 +20,8 @@ import GuruhlarView from "../view/Guruhlar/Guruhlar";
 import RoomsView from "../view/Guruhlar/Rooms";
 import HodimlarView from "../view/HR/Hodimlar";
 import RolesView from "../view/HR/Roles";
-
+import ListView from "../view/Kurslar/List.jsx";
+import FieldView from "../view/Kurslar/Field.jsx";
 
 const sidebar = [
   {
@@ -176,7 +177,7 @@ const sidebar = [
         title: "Barcha Kurslar",
         path: "/kurslar/all-kurslar",
         isPrivate: true,
-        element: Generics,
+        element: ListView,
         role: ["admin", "manager"],
       },
       {
@@ -184,7 +185,7 @@ const sidebar = [
         title: "Yo'nalishlar",
         path: "/kurslar/yonalish",
         isPrivate: true,
-        element: Generics,
+        element: FieldView,
         role: ["admin", "manager"],
       },
     ],
