@@ -6,7 +6,6 @@ import { Breadcrumb } from "../../../components/Generics/BreadCrumb";
 import GenericButton from '../../../components/Generics/Button';
 import AllLidsModal from "./modal"
 
-
 export const Fields = () => {
   // const [open, setOpen] = useState(false);
   const [modalOpen, setModal] = useState(false);
@@ -92,11 +91,6 @@ export const Fields = () => {
       status: "Ishlayabdi",
     },
   ];
-  // const data1 = [
-  //   { value: "uzbek", title: "Uzbek" },
-  //   { value: "russian", title: "Russian" },
-  //   { value: "english", title: "English" },
-  // ];
 
   const onToggleModal = () => {
     setModal(!modalOpen);
@@ -114,26 +108,15 @@ export const Fields = () => {
         onSave={onSave}
       />
       <Breadcrumb>
-        {/* <GenericButton type="filter" onClick={() => setOpen(!open)}>
-          Filter
-        </GenericButton> */}
         <GenericButton type="add" onClick={onToggleModal}>
-          Xona qo'shish
+          Yo'nalish qo'shish
         </GenericButton>
       </Breadcrumb>
       <GenericTable
-        // open={open}
         headCells={headCells}
         rows={rows}
         checkbox={false}
-      >
-        {/* <GenericSelect data={data1} />
-        <GenericSelect data={data1} />
-        <GenericSelect data={data1} />
-        <GenericSelect data={data1} />
-        <GenericSelect data={data1} />
-        <GenericSelect data={data1} /> */}
-      </GenericTable>
+      ></GenericTable>
     </Container>
   );
 };

@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
-import { Container, Action } from './style'
+import { Action, Container } from "./style";
 import { Breadcrumb } from "../../../components/Generics/BreadCrumb";
 import GenericButton from '../../../components/Generics/Button';
+import GroupModal from "./GroupModal";
 import { rows } from "../../../mock/groups";
 import CollapsibleTable from "./Table";
-import GroupModal from "./GroupModal";
 
 export const GroupsList = () => {
   // const [open, setOpen] = useState(false);

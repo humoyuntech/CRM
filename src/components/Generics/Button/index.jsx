@@ -3,7 +3,6 @@ import { Button, Icons } from "./style";
 
 export const GenericButton = (props) => {
   const { children, type } = props;
-
   switch (type) {
     case "filter":
       return (
@@ -33,7 +32,6 @@ export const GenericButton = (props) => {
     default:
       return <Button {...props}>{children}</Button>;
   }
-  
 };
 
 export default GenericButton;

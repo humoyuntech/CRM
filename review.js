@@ -79,13 +79,13 @@ git push -u origin main
 // 025/SelectableTable
 // 026/TableCollapse
 // 027/GroupListModal
+// 028/GroupListAddModal
 
 
-// git branch -M 027/GroupListModal
-// git push -u origin 027/GroupListModal
+// git branch -M 028/GroupListAddModal
+// git push -u origin 028/GroupListAddModal
 
-// 42-video
-// https://github.com/mukhtorov/crm-project/tree/%2339/groupList_modal
+// 43-video
 
 
 //   1 - dars | Project haqida | YouTube Link

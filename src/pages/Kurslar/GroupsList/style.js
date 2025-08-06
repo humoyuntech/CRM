@@ -16,6 +16,7 @@ export const Container = styled.div``;
 export const Action = styled.div`
   display: flex;
   justify-content: flex-end;
+  /* gap: 18px; */
   z-index: 9999;
 `;
 
@@ -62,11 +63,13 @@ export const Arrow = styled.div`
 
 export const StatusWrapper = styled.div`
   display: flex;
+  /* height: 32px; */
   align-items: center;
   gap: 10px;
   font-size: 16px;
   font-weight: 500;
   padding: 10px 15px;
+  /* margin: 5px 0; */
   &:hover {
     background: #f8fafc;
   }
@@ -82,7 +85,10 @@ Devider.Role = styled.div`
   flex-direction: column;
   flex: 1;
   gap: 8px;
-
+  /*
+  border: 1px solid #91d5ff;
+   border-left: 0;
+  border-radius: 0px 8px 8px 0px; */
 `;
 Devider.Filiallar = styled.div`
   display: flex;
