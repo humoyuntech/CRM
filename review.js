@@ -80,19 +80,20 @@ git push -u origin main
 // 026/TableCollapse
 // 027/GroupListModal
 // 028/GroupListAddModal
+// 029/SozlamalarUmumiy
 
 
-// git branch -M 028/GroupListAddModal
-// git push -u origin 028/GroupListAddModal
+// git branch -M 029/SozlamalarUmumiy
+// git push -u origin 029/SozlamalarUmumiy
 
-// 43-video
+// 44-video
 
 
 //   1 - dars | Project haqida | YouTube Link
 // — Bu qanday project?
 // — Project kimlar uchun?
 // — Projectni uchun nimalar talab qilinadi?
-// — Project demo review.
+// — Project demo review. 
 // — Projectda qanday kutubhonalar foydalanilgan.
 
 // 2 - dars | Create Project | YouTube Link

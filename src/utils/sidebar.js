@@ -22,6 +22,7 @@ import HodimlarView from "../view/HR/Hodimlar";
 import RolesView from "../view/HR/Roles";
 import ListView from "../view/Kurslar/List.jsx";
 import FieldView from "../view/Kurslar/Field.jsx";
+import UmumiyView from "../view/Sozlamalar/Umumiy.jsx";
 
 const sidebar = [
   {
@@ -231,7 +232,7 @@ const sidebar = [
         title: "Umumiy Sozlamalar",
         path: "/sozlamalar/umumiy",
         isPrivate: true,
-        element: Generics,
+        element: UmumiyView,
         role: ["admin", "manager"],
       },
       {
