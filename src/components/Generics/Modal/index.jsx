@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/prop-types */
 import GenericButton from "../Button";
 import { Container, Footer, Wrapper } from "./style";
 import { createPortal } from "react-dom";
@@ -22,9 +24,7 @@ export const Modal = (props) => {
             </Footer>
           </Wrapper>
         </Container>,
-        document.body
+        document.getElementById("modal")
       )
     : null;
 };
-
-export default Modal

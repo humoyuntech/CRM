@@ -66,6 +66,5 @@ Button.Delete = styled(Button)`
   border: 1px solid;
 `;
 
-
 export { Button };
-export default Button
+export default Button;

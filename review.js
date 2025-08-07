@@ -79,20 +79,21 @@ git push -u origin main
 // 025/SelectableTable
 // 026/TableCollapse
 // 027/GroupListModal
+// 028/GroupListAddModal
+// 029/SozlamalarUmumiy
 
 
-// git branch -M 027/GroupListModal
-// git push -u origin 027/GroupListModal
+// git branch -M 029/SozlamalarUmumiy
+// git push -u origin 029/SozlamalarUmumiy
 
-// 42-video
-// https://github.com/mukhtorov/crm-project/tree/%2339/groupList_modal
+// 44-video
 
 
 //   1 - dars | Project haqida | YouTube Link
 // — Bu qanday project?
 // — Project kimlar uchun?
 // — Projectni uchun nimalar talab qilinadi?
-// — Project demo review.
+// — Project demo review. 
 // — Projectda qanday kutubhonalar foydalanilgan.
 
 // 2 - dars | Create Project | YouTube Link
