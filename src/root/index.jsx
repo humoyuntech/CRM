@@ -12,7 +12,6 @@ export const Root = () => {
       <Routes>
         {/* MAIN */}
         <Route element={<Sidebar />}>
-
           {/* SozlamalarR */}
           <Route element={<UmumiySidebar />}>
             {umumiy.map((item) => {
@@ -26,33 +25,32 @@ export const Root = () => {
               );
             })}
           </Route>
-
           <Route path={"/guruhlar/guruhlar/checkin"} element={<Checkin />} />;
-            {sidebar.map((parent) => {
-              const ElementParent = parent.element;
-              if (parent?.children) {
-                return parent.children.map((child) => {
-                  const ElementChild = child.element;
-                  return (
-                    <Route
-                      key={child.id}
-                      path={child.path}
-                      element={<ElementChild />}
-                    />
-                  );
-                });
-              } else
+          {sidebar.map((parent) => {
+            const ElementParent = parent.element;
+            if (parent?.children) {
+              return parent.children.map((child) => {
+                const ElementChild = child.element;
                 return (
-                  !parent.hidden && (
-                    <Route
-                      key={parent.id}
-                      path={parent.path}
-                      element={<ElementParent />}
-                    />
-                  )
+                  <Route
+                    key={child.id}
+                    path={child.path}
+                    element={<ElementChild />}
+                  />
                 );
-            })}
-          </Route>
+              });
+            } else
+              return (
+                !parent.hidden && (
+                  <Route
+                    key={parent.id}
+                    path={parent.path}
+                    element={<ElementParent />}
+                  />
+                )
+              );
+          })}
+        </Route>
 
         {sidebar.map((parent) => {
           const ElementParent = parent.element;
@@ -68,10 +66,6 @@ export const Root = () => {
         })}
 
         <Route path="/" element={<Navigate to={"/analitika"} />} />
-        <Route
-          path="/sozlamalar/umumiy/"
-          element={<Navigate to={"/sozlamalar/umumiy/check"} />}
-        />
         <Route path="*" element={<h1>404 not found</h1>} />
       </Routes>
     </Container>

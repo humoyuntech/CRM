@@ -82,12 +82,13 @@ git push -u origin main
 // 028/GroupListAddModal
 // 029/SozlamalarUmumiy
 // 030/SozlamalarUmumiyPages
+// 031/BugFix
 
 
-// git branch -M 030/SozlamalarUmumiyPages
-// git push -u origin 030/SozlamalarUmumiyPages
+// git branch -M 031/BugFix
+// git push -u origin 031/BugFix
 
-// 45-46-video
+// 48-video
 
 
 //   1 - dars | Project haqida | YouTube Link

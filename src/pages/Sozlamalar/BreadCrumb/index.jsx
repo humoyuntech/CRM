@@ -3,23 +3,13 @@ import { useLocation } from "react-router-dom";
 import Title from "../../../components/Generics/Title";
 import { Arrow, Container } from "./style";
 import Subtitle from "../../../components/Generics/Subtitle";
-import { useEffect, useState } from "react";
+
 
 export const Breadcrumb = ({ children }) => {
-  const [path, setPath] = useState([]);
   const location = useLocation();
-  console.log(location, "lcopoooo");
-  useEffect(() => {
-    setPath(
-      typeof location.state.parent === "string"
-        ? location.state.parent.split(" ")
-        : location.state.parent
-    );
-  }, []);
-
   return (
     <Container>
-      {path.map((value) => {
+      {location.state?.parent?.map((value) => {
         return (
           <Title key={value}>
             {value} <Arrow />

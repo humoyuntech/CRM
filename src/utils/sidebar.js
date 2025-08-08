@@ -230,7 +230,8 @@ const sidebar = [
       {
         id: `8 - 1`,
         title: "Umumiy Sozlamalar",
-        path: "/sozlamalar/umumiy",
+        parentID: 8,
+        path: "/sozlamalar/umumiy/check",
         isPrivate: true,
         element: UmumiyView,
         role: ["admin", "manager"],

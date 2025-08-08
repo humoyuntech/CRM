@@ -1,13 +1,11 @@
 import { Outlet } from "react-router-dom";
 import { umumiy } from "../../../../utils/sozlamalar";
 import { Body, Container, Link, Sidebar, Wrapper } from "./style";
-// ok
 
 export const UmumiySidebar = () => {
   return (
     <Container>
       <Wrapper>
-        
         <Sidebar>
           {umumiy.map((item) => {
             const { icon: Icon } = item;
@@ -22,11 +20,9 @@ export const UmumiySidebar = () => {
             );
           })}
         </Sidebar>
-
         <Body>
           <Outlet />
         </Body>
-
       </Wrapper>
     </Container>
   );
