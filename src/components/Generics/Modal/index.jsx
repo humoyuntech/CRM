@@ -1,5 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable react/prop-types */
 import GenericButton from "../Button";
 import { Container, Footer, Wrapper } from "./style";
 import { createPortal } from "react-dom";

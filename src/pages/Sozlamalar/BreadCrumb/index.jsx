@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import { useLocation } from "react-router-dom";
-import Title from "../../Generics/Title";
+import Title from "../../../components/Generics/Title";
 import { Arrow, Container } from "./style";
-import Subtitle from "../../Generics/Subtitle";
+import Subtitle from "../../../components/Generics/Subtitle";
 import { useEffect, useState } from "react";
 
 export const Breadcrumb = ({ children }) => {
