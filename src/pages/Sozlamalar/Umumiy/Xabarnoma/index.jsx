@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Container, Status } from "./style";
-import GenericTable from "../../../Generics/Table";
+import GenericTable from "../../../../components/Generics/Table";
 import Switch from "@mui/material/Switch";
 import { Breadcrumb } from "../../BreadCrumb";
 

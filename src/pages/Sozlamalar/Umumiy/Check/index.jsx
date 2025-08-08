@@ -1,9 +1,10 @@
 import { useState } from "react";
-import Subtitle from "../../../Generics/Subtitle";
+import Subtitle from "../../../../components/Generics/Subtitle";
 import { Container, FileUpload, ImgBox } from "./style";
-import GenericInput from "../../../Generics/Input";
-import GenericSelect from "../../../Generics/Select";
-import GenericButton from "../../../Generics/Button";
+import GenericInput from "../../../../components/Generics/Input";
+import GenericSelect from "../../../../components/Generics/Select";
+import GenericButton from "../../../../components/Generics/Button";
+
 
 export const Check = () => {
   const [url, setUrl] = useState("");
@@ -31,7 +32,7 @@ export const Check = () => {
       <Subtitle color="#929FAF" mt={24} mb={8}>
         Tilni tanlang
       </Subtitle>
-      <GenericSelect width={500} />
+     <GenericSelect width={500} />
       <GenericButton type="primary" mt={32} width={88} ml="auto">
         Saqlash
       </GenericButton>

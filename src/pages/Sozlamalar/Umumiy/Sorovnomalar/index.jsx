@@ -2,10 +2,9 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Container, Status } from "./style";
-// import GenericButton from "../../../Generics/Button";
-import GenericTable from "../../../Generics/Table";
+import GenericTable from "../../../../components/Generics/Table";
 import { Breadcrumb } from "../../BreadCrumb";
-import GenericButton from "../../../Generics/Button";
+import GenericButton from "../../../../components/Generics/Button";
 import SorovnomaModal from "./modal";
 
 export const Sorovnomalar = () => {

@@ -12,12 +12,14 @@ export const Container = styled.div`
   width: 100%;
   min-width: ${({ width }) => getValue(width)};
   max-width: ${({ width }) => getValue(width)};
+  box-sizing: border-box;
 `;
 
 export const Input = styled.input`
   border: 0;
   outline: none;
   flex: 1;
+  /* width: 100%; */
   width: ${({ width }) => getValue(width)};
   height: ${({ height }) => getValue(height, "40px")};
   max-width: ${({ width }) => getValue(width)};
