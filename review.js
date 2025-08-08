@@ -87,7 +87,7 @@ git push -u origin main
 // git branch -M 030/SozlamalarUmumiyPages
 // git push -u origin 030/SozlamalarUmumiyPages
 
-// 45-video
+// 45-46-video
 
 
 //   1 - dars | Project haqida | YouTube Link
