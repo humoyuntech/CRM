@@ -11,6 +11,10 @@ import XabarnomaView from "../view/Sozlamalar/Xabarnoma";
 import SorovnomaView from "../view/Sozlamalar/Sorovnoma";
 import CallConfigView from "../view/Sozlamalar/CallConfig";
 
+// Manager
+import TolovlarView from "../view/Sozlamalar/Tolovlar";
+import DarajalarView from "../view/Sozlamalar/Darajalar";
+
 export const umumiy = [
   { id: 1, icon: Check, element: CheckView, path: "check", title: "Check" },
   {
@@ -40,5 +44,22 @@ export const umumiy = [
     element: CallConfigView,
     path: "status",
     title: "Status ",
+  },
+];
+
+export const manager = [
+  {
+    id: 2,
+    icon: Check,
+    element: TolovlarView,
+    path: "tolovlar",
+    title: "To'lovlar",
+  },
+  {
+    id: 3,
+    icon: filial,
+    element: DarajalarView,
+    path: "darajalar",
+    title: "Darajalar",
   },
 ];
