@@ -83,12 +83,13 @@ git push -u origin main
 // 029/SozlamalarUmumiy
 // 030/SozlamalarUmumiyPages
 // 031/BugFix
+// 032/SozlamalarManager
 
 
-// git branch -M 031/BugFix
-// git push -u origin 031/BugFix
+// git branch -M 032/SozlamalarManager
+// git push -u origin 032/SozlamalarManager
 
-// 48-video
+// 49-video
 
 
 //   1 - dars | Project haqida | YouTube Link
