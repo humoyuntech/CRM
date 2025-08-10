@@ -246,10 +246,11 @@ const sidebar = [
         role: ["admin", "manager"],
       },
       {
-        id: `8 - 3`,
+          id: `8 - 3`,
         title: "Mentor",
-        path: "/sozlamalar/mentor",
+        path: "/sozlamalar/ustoz/kpi",
         isPrivate: true,
+        parentID: 8,
         element: Generics,
         role: ["admin", "manager"],
       },
