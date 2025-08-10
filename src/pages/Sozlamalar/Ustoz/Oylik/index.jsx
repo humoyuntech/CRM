@@ -2,10 +2,10 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Container } from "./style";
-import GenericTable from "../../../Generics/Table";
+import GenericTable from "../../../../components/Generics/Table";
 import { Breadcrumb } from "../../BreadCrumb";
 import DarajalarModal from "./modal";
-import GenericButton from "../../../Generics/Button";
+import GenericButton from "../../../../components/Generics/Button";
 
 export const Oylik = () => {
   const [open, setOpen] = useState(false);
