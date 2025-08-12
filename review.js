@@ -85,11 +85,12 @@ git push -u origin main
 // 031/BugFix
 // 032/SozlamalarManager
 // 033/SozlamalarUstoz
+// 034/SozlamalarTalaba
 
-// git branch -M 033/SozlamalarUstoz
-// git push -u origin 033/SozlamalarUstoz
+// git branch -M 034/SozlamalarTalaba
+// git push -u origin 034/SozlamalarTalaba
 
-// 50-video
+// 51-video
 
 //   1 - dars | Project haqida | YouTube Link
 // — Bu qanday project?
