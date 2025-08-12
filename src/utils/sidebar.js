@@ -257,7 +257,8 @@ const sidebar = [
       {
         id: `8 - 4`,
         title: "Talaba",
-        path: "/sozlamalar/talaba",
+        path: "/sozlamalar/student/tolovlar",
+        parentID: 8,
         isPrivate: true,
         element: Generics,
         role: ["admin", "manager"],
